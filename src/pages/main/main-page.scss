@@ -1,0 +1,215 @@
+@import 'src/variables.scss';
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 20px;
+  padding: 44px 0;
+  font-family: 'Gilroy';
+  font-weight: normal;
+  font-size: 14px;
+
+  & > h1 {
+    margin-bottom: 34px;
+    font-family: 'Nekst';
+    font-weight: 900;
+    font-size: 34px;
+    line-height: 90%;
+    color: $black;
+  }
+
+  & > form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+    column-gap: 16px;
+
+    & > label,
+    & > .input,
+    & > input,
+    & > .button {
+      grid-column: 1 / -1;
+    }
+
+    & > label {
+      margin-bottom: 8px;
+      color: #333E48;
+    }
+
+    & > label:nth-child(7),
+    & > label:nth-child(9) {
+      margin-bottom: 2px;
+      color: #333333;
+    }
+
+    & > .input {
+      margin-bottom: 25px;
+    }
+
+    & > input:nth-child(8) {
+      margin-bottom: 29px;
+      color: #333333;
+    }
+
+    & > input:nth-child(10) {
+      margin-bottom: 32px;
+      color: #333333;
+    }
+
+    & > input {
+      border: none;
+      outline: none;
+      padding: 0;
+      font-family: 'Nekst';
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 20px;
+      background-color: transparent;
+    }
+  }
+}
+
+
+@media screen and (min-width: $md) {
+  .main-page {
+    margin: 0 36px;
+    padding: 64px 0;
+    font-size: 16px;
+
+    & > h1 {
+      margin-bottom: 44px;
+      font-size: 54px;
+    }
+
+    & > form {
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-flow: column;
+      column-gap: 32px;
+
+      & > label {
+        margin-bottom: 24px;
+        color: $gray;
+      }
+
+      & > label:nth-child(7),
+      & > label:nth-child(9) {
+        width: 100%;
+        margin-bottom: 8px;
+        color: #333333;
+      }
+
+      & > label:nth-child(7) {
+        grid-column: 1 / span 2;
+      }
+
+      & > label:nth-child(9) {
+        grid-column: 3 / span 2;
+      }
+
+      & > .input {
+        margin-bottom: 39px;
+      }
+
+      & > input {
+        font-size: 54px;
+        line-height: 90%;
+        color: #333333;
+      }
+
+      & > input:nth-child(8) {
+        grid-column: 1 / span 2;
+        margin-bottom: 44px;
+      }
+
+      & > input:nth-child(10) {
+        grid-column: 3 / span 2;
+        margin-bottom: 44px;
+      }
+
+      & > .button {
+        grid-column: 1 / -1;
+        width: max-content;
+        padding: 14px 52px 18px 52px;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: $lg) {
+  .main-page {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 32px;
+    margin: 0 48px;
+    padding: 100px 0;
+
+    & > h1 {
+      grid-column: 1 / span 5;
+    }
+
+    & > form {
+      grid-column: 1 / -1;
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}
+
+
+@media screen and (min-width: $xl) {
+  .main-page {
+    grid-template-columns: repeat(12, 1fr);
+    align-content: center;
+    column-gap: 32px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+
+    & > h1 {
+      grid-column: 1 / span 6;
+    }
+
+    & > form {
+      grid-column: 1 / -1;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 32px;
+
+      & > label:nth-child(1),
+      & > .input:nth-child(2),
+      & > label:nth-child(7),
+      & > input:nth-child(8) {
+        grid-column: 1 / span 4;
+      }
+
+      & > label:nth-child(3),
+      & > .input:nth-child(4),
+      & > label:nth-child(9),
+      & > input:nth-child(10) {
+        grid-column: 5 / span 4;
+      }
+
+      & > input:nth-child(8),
+      & > input:nth-child(10) {
+        margin-bottom: 0;
+      }
+
+      & > label:nth-child(5),
+      & > .input:nth-child(6),
+      & > .button:nth-child(11) {
+        grid-column: 9 / span 4;
+      }
+
+      & > .input:nth-child(2),
+      & > .input:nth-child(4),
+      & > .input:nth-child(6) {
+        margin-bottom: 51px;
+      }
+
+      & > .button:nth-child(11) {
+        grid-row: 3 / span 2;
+        align-self: end;
+      }
+    }
+  }
+}

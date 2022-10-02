@@ -7,7 +7,8 @@ export const Button = (
     children,
     onClick,
     isDisabled = false,
-    isLoading = false
+    isLoading = false,
+    ...rest
   }) => {
 
   return (
@@ -18,6 +19,7 @@ export const Button = (
       })}
       onClick={onClick}
       disabled={isDisabled || isLoading}
+      {...rest}
     >
       <span>{children}</span>
       {isLoading && <Loader />}
