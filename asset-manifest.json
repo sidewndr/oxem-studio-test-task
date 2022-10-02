@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/oxem-studio-test-task/static/css/main.4a788622.css",
+    "main.js": "/oxem-studio-test-task/static/js/main.5026db30.js",
+    "static/media/Nekst-Black.woff2": "/oxem-studio-test-task/static/media/Nekst-Black.44814bfd3ba4a266cf1d.woff2",
+    "static/media/Gilroy-Bold.woff2": "/oxem-studio-test-task/static/media/Gilroy-Bold.ef7c40ff1efeaaa4c7c6.woff2",
+    "static/media/Gilroy-Regular.woff2": "/oxem-studio-test-task/static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
+    "index.html": "/oxem-studio-test-task/index.html",
+    "static/media/loader.svg": "/oxem-studio-test-task/static/media/loader.4e82ac858606a43fa04f9de824dc3dc3.svg",
+    "main.4a788622.css.map": "/oxem-studio-test-task/static/css/main.4a788622.css.map",
+    "main.5026db30.js.map": "/oxem-studio-test-task/static/js/main.5026db30.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a788622.css",
+    "static/js/main.5026db30.js"
+  ]
+}
