@@ -1,0 +1,129 @@
+@import 'src/variables.scss';
+
+.input {
+  position: relative;
+  border: 2px solid $gray-light;
+  border-radius: 16px;
+  background-color: $gray-light;
+  font-family: 'Nekst';
+  font-weight: 900;
+  font-size: 22px; //!!!!!!
+  color: #333E48; //!!!!!!!
+
+  &:focus-within {
+    background-color: transparent;
+  }
+
+
+  /* Hide input number arrows*/
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+
+  input {
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: inherit;
+  }
+
+  /* Main input */
+  .input__main-input {
+    width: 100%;
+    height: 56px; //!!!!!
+    padding: 0 18px; //!!!!!!
+  }
+
+
+  /* Secondary input */
+  .input__secondary-input {
+    position: absolute;
+    top: 50%;
+    right: 6px; //!!!!!!!
+    transform: translateY(-50%);
+    width: 67px; //!!!!!!!!
+    height: 48px; //!!!!!!!!
+    border-radius: 12px; //!!!!!!!!
+    text-align: center;
+
+    &:focus {
+      background-color: transparent;
+    }
+
+    &.input__secondary-input_editable {
+      border: 2px solid #E0E0E0;
+      background-color: #E0E0E0;
+    }
+  }
+
+  &:focus-within .input__secondary-input {
+    background-color: transparent;
+  }
+
+
+  /* Slider */
+  .slider {
+    position: absolute;
+    left: 20px; //!!!!!!!!
+    bottom: -2px;
+    width: calc(100% - 40px); //!!!!!!!!
+
+    &::-webkit-slider-thumb {
+      transition: transform 0.15s;
+    }
+
+    &::-moz-range-thumb {
+      transition: transform 0.15s;
+    }
+  }
+
+  &:hover .slider::-webkit-slider-thumb {
+    transform: scale(1.2);
+  }
+
+  &:hover .slider::-moz-range-thumb {
+    transform: scale(1.2);
+  }
+}
+
+
+@media screen and (min-width: $md) {
+  .input {
+    font-size: 30px;
+    color: $gray;
+
+    /* Main input */
+    .input__main-input {
+      height: 64px;
+      padding: 0 22px;
+    }
+
+    /* Secondary input */
+    .input__secondary-input {
+      right: 7px;
+      width: 70px;
+      height: 54px;
+      border-radius: 16px;
+    }
+
+    .input__secondary-input_editable {
+      font-size: 20px;
+      line-height: 120%;
+    }
+
+    /* Slider */
+    .slider {
+      left: 24px;
+      width: calc(100% - 48px);
+    }
+  }
+}

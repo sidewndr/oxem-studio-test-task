@@ -1,4 +1,4 @@
-import './Loader.scss'
+import './loader.scss'
 import {ReactComponent as LoaderIcon} from '../../attachments/icons/loader.svg'
 
 export const Loader = () => {

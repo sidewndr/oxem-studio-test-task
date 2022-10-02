@@ -1,0 +1,58 @@
+@import 'src/variables.scss';
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0 22px 0;
+  border: 0;
+  border-radius: 40px;
+  font-family: 'Nekst';
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 20px;
+  color: $white;
+  background-color: $orange;
+  cursor: pointer;
+  transition: background-color 0.15s, opacity 0.15s;
+
+  &:hover {
+    background-color: $black;
+  }
+
+  &:active {
+    background-color: $gray;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+    background-color: $orange;
+    cursor: default;
+  }
+
+
+  &.button_loading {
+    position: relative;
+
+    span {
+      visibility: hidden;
+    }
+
+    .loader {
+      position: absolute;
+    }
+
+    &:disabled {
+      opacity: 1;
+    }
+  }
+}
+
+
+@media screen and (min-width: $md) {
+  .button {
+    padding: 14px 0 18px 0;
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
